@@ -22,11 +22,7 @@ try {
 } finally {
   console.log(greeting1);
 
-<<<<<<< HEAD:app.js
 console.log(greeting1); 
 
 
 }
-=======
-console.log(greeting1); */
->>>>>>> 13390079fa43050f5853db9aca997ef6ad4a6efc:app-backup.js
