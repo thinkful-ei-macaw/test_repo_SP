@@ -17,12 +17,15 @@ function getYearOfBirth(age) {
 console.log('Hi');
 createGreeting('Patrick', 24);
 
-/*try {
-  const greeting1 = createGreeting('Patrick', 24);
+let greeting1;
+try {
+  greeting1 = createGreeting('Patrick', 24);
 } catch (e) { 
-  console.log('your mama');
   console.log(`${e.name}: ${e.message}`);
 } finally {
   console.log(greeting1);
 
-console.log(greeting1); */
+console.log(greeting1); 
+
+
+}
