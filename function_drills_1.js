@@ -29,11 +29,11 @@ function getYearOfBirth (age) {
 }
 
 let  greeting1; 
-// ^^^^^^^^^^^ *NB* when declared variable as `const`, got SyntaxError: Missing initializer in const declaration. *WHY?*
+// ^^^^^^^^^^^ *NB* when declared variable as `const greeting1`, got SyntaxError: Missing initializer in const declaration. *WHY?*
 
 try {
   greeting1 = createGreeting('Sacha', 46);
-  
+
   // to test error states...
   // greeting1 = createGreeting(); // to test `typeof` conditional (=== 'undefined')
   // greeting1 = createGreeting('Sacha', 'forty-six'); // to test another `typeof` conditional (re: string && number)
