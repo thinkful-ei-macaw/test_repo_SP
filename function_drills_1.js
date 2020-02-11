@@ -1,14 +1,22 @@
 'use strict';
 
 function createGreeting(name, age) {
+
+  // perhaps I should use alternate conditional, replacing if/else statement with a switch statement?
+  
   if (typeof name !== 'undefined' && typeof age !== 'undefined') {
-    const yob = getYearOfBirth(age);
-    return `Hi, my name is ${name} and I'm — gulp — ${age} years old. I was born in ${yob}.`;
-    
+    if (typeof name === 'string' &&  typeof age === 'number') {
+      const yob = getYearOfBirth(age);
+      return `Hi, my name is ${name} and I'm — gulp — ${age} years old. I was born in ${yob}.`;
+    } else {
+      throw new TypeError('Arguments(s) not valid');
+    }
   } else {
-    throw new Error('Arguments not valid');
+    throw new Error('Argument(s) not valid');
   }
 }
+
+
 
 function getYearOfBirth (age) {
   if (age < 0) {
@@ -20,8 +28,9 @@ function getYearOfBirth (age) {
 let greeting1; // *NB* when declared variable as `const`, got SyntaxError: Missing initializer in const declaration. *WHY?*
 
 try {
-  greeting1 = createGreeting('Sacha', 46);
-  // greeting1 = createGreeting(); // to test `throw new Error('Arguments not valid')`
+  // greeting1 = createGreeting('Sacha', 46);
+  // greeting1 = createGreeting(); // to test `typeof` conditional (=== 'undefined')
+  greeting1 = createGreeting('Sacha', 'forty-six'); // to test another `typeof` conditional (re: string && number)
 
 } catch (err) {
   console.log(`${err.name}: ${err.message}`);
