@@ -1,5 +1,10 @@
 'use strict';
 
+// THINKFUL SOLUTION
+// https://github.com/rich-at-thinkful/ft-curric-gists/blob/master/fundamentals/solutions/function-drills-1-solution.md
+
+// MY SOLUTION
+
 function createGreeting(name, age) {
 
   // perhaps I should use alternate conditional, replacing if/else statement with a switch statement?
@@ -16,8 +21,6 @@ function createGreeting(name, age) {
   }
 }
 
-
-
 function getYearOfBirth (age) {
   if (age < 0) {
     throw new Error('Age can not be negative');
@@ -25,12 +28,15 @@ function getYearOfBirth (age) {
   return 2019 - age;
 }
 
-let greeting1; // *NB* when declared variable as `const`, got SyntaxError: Missing initializer in const declaration. *WHY?*
+let  greeting1; 
+// ^^^^^^^^^^^ *NB* when declared variable as `const`, got SyntaxError: Missing initializer in const declaration. *WHY?*
 
 try {
-  // greeting1 = createGreeting('Sacha', 46);
+  greeting1 = createGreeting('Sacha', 46);
+  
+  // to test error states...
   // greeting1 = createGreeting(); // to test `typeof` conditional (=== 'undefined')
-  greeting1 = createGreeting('Sacha', 'forty-six'); // to test another `typeof` conditional (re: string && number)
+  // greeting1 = createGreeting('Sacha', 'forty-six'); // to test another `typeof` conditional (re: string && number)
 
 } catch (err) {
   console.log(`${err.name}: ${err.message}`);
