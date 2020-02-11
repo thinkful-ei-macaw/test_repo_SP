@@ -1,8 +1,12 @@
 'use strict';
 
 function createGreeting(name, age) {
-  const yearOfBirth = 2019  - age;
-  return `Hi, my name is ${name} and I'm — gulp — ${age} years old. I was born in ${yearOfBirth}.`;
+  const yob = getYearOfBirth(age);
+  return `Hi, my name is ${name} and I'm — gulp — ${age} years old. I was born in ${yob}.`;
+}
+
+function getYearOfBirth (age) {
+  return 2019 - age;
 }
 
 
